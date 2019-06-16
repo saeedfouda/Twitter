@@ -1,0 +1,84 @@
+@import "global.scss";
+body{
+    background: #e6ecf0;
+    padding-top: 52px;
+}
+.loading-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    img{
+        position: absolute;
+        @include centerizing;
+        width: 70px;
+    }
+}
+.auth{
+    margin-top: 20px;
+    .card{
+        .card-body{
+            padding: 40px 0 20px 70px;
+            h3{
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            input:not([type=submit]):not([type=checkbox]):not([type=radio]){
+                display: block;
+                min-width: 50%;
+                margin-bottom: 10px;
+                padding: 5px 7px;
+                border-radius: 4px;
+                border: 1px solid #e6ecf0;
+                font-size: 1.13rem;
+                &:focus{
+                    border-color: rgba(0,132,180,0.5);
+                    outline: none;
+                }
+            }
+            input[type=submit]{
+                padding: 5px 10px;
+                background: #1c94e0;
+                color: #FFF;
+                border: 1px solid #1c94e0;
+                border-radius: 20px;
+                margin-right: 6px;
+                cursor: pointer;
+                outline: none;
+            }
+            label:after{
+                content: '.';
+                display: inline;
+                margin-left: 4px;
+            }
+            a{
+                color: #1c94e0;
+                text-decoration: none;
+            }
+        }
+        .card-foot{
+            background: #f5f8fa;
+            padding: 15px 0 5px 70px;
+            p{
+                color: #657786;
+                a{
+                    color: #1c94e0;
+                    text-decoration: none;
+                }
+            }
+        }
+        @media(max-width: 576px){
+            .card-foot, .card-body{
+                padding: 40px 20px 20px;
+                input:not([type=submit]):not([type=checkbox]):not([type=radio]){
+                    width: 100%;
+                }
+                &.card-foot{
+                    padding: 15px 20px 5px;
+                }
+            }
+        }
+    }
+}

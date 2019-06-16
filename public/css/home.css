@@ -1,0 +1,801 @@
+/*~~~~~~~~~~~~~~~* Fixed Mixins *~~~~~~~~~~~~~~~*/
+
+@media (max-width: 575px) {
+  .d-xs-none {
+    display: none !important;
+  }
+
+  .d-xs-block {
+    display: block !important;
+  }
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.loading-screen {
+  position: fixed;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loading-screen img {
+  position: absolute;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*~~~~~~~~~~~~~~~~~~* Navbar *~~~~~~~~~~~~~~~~~~*/
+
+nav {
+  background: #FFF;
+  border-bottom: 1px solid #BBB;
+  padding: 0 !important;
+  height: 52px;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  height: 44px;
+}
+
+nav ul a li {
+  float: left;
+  padding: 12px 15px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav ul a li:hover,
+nav ul a li.active {
+  border-bottom: 2px solid #1da1f2;
+}
+
+nav ul a li:hover i,
+nav ul a li.active i {
+  color: #1da1f2;
+}
+
+nav ul a li i {
+  font-size: 1.15rem;
+  color: #66757f;
+  margin-right: 3px;
+}
+
+nav ul a li span {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #66757f;
+}
+
+nav .form-inline form input {
+  background: #f5f8fa;
+  font-size: .86rem;
+  margin-right: 0 !important;
+  border-radius: 16px;
+  border-right: none;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+nav .form-inline form button {
+  border: 1px solid #ced4da;
+  background: none;
+  border-left: none;
+  background: #f5f8fa;
+  margin-left: -2px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+nav .form-inline .dropdown img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin-left: 13px;
+}
+
+nav .form-inline .dropdown .dropdown-item:hover {
+  background: #1da1f2;
+  color: #FFF;
+}
+
+nav .form-inline button.tweet {
+  background: #1da1f2;
+  color: #FFF;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-left: 13px;
+}
+
+.alert-message {
+  position: fixed;
+  top: 52px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9;
+}
+
+.alert-message .card {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: #66757f;
+  padding: 10px 5px;
+}
+
+.alert-message .card i {
+  position: absolute;
+  font-size: .8rem;
+  color: #AAA;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* alertify */
+
+.ajs-header {
+  font-weight: bold;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.ajs-button.ajs-ok {
+  background: #E02459;
+  border: 1px solid #E02459;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 17px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.ajs-button.ajs-ok:hover {
+  background: #ac002b;
+  border-color: #ac002b;
+}
+
+.ajs-button.ajs-cancel {
+  background: #FFF;
+  border-radius: 17px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #66757f;
+  color: #66757f;
+  font-weight: bold;
+  outline: none;
+}
+
+i.new-notify {
+  background: #1da1f2;
+  height: 6.5px;
+  width: 6.5px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+body {
+  background: #e6ecf0;
+  padding-top: 52px;
+}
+
+.home,
+.search {
+  margin-top: 10px;
+}
+
+.home .row > div,
+.search .row > div {
+  padding: 0;
+}
+
+.home .row .left-bar,
+.home .row .ppl,
+.search .row .left-bar,
+.search .row .ppl {
+  padding-right: 10px;
+}
+
+.home .row .left-bar.ppl,
+.home .row .ppl.ppl,
+.search .row .left-bar.ppl,
+.search .row .ppl.ppl {
+  margin-bottom: 15px;
+}
+
+.home .row .left-bar.ppl button.follow,
+.home .row .ppl.ppl button.follow,
+.search .row .left-bar.ppl button.follow,
+.search .row .ppl.ppl button.follow {
+  margin: 5px 0 0 10px;
+  padding: 3px 20px;
+  background: #FFF;
+  border: 1px solid #1DA1F2;
+  border-radius: 15px;
+  color: #1DA1F2;
+  font-weight: bold;
+  font-size: .9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.home .row .left-bar.ppl button.follow.followed,
+.home .row .ppl.ppl button.follow.followed,
+.search .row .left-bar.ppl button.follow.followed,
+.search .row .ppl.ppl button.follow.followed {
+  background: #1DA1F2;
+  color: #FFF;
+  border-color: #1DA1F2;
+}
+
+.home .row .left-bar.ppl button.follow.followed[disabled],
+.home .row .ppl.ppl button.follow.followed[disabled],
+.search .row .left-bar.ppl button.follow.followed[disabled],
+.search .row .ppl.ppl button.follow.followed[disabled] {
+  cursor: inherit;
+}
+
+.home .row .left-bar .profileCard a.cover,
+.home .row .ppl .profileCard a.cover,
+.search .row .left-bar .profileCard a.cover,
+.search .row .ppl .profileCard a.cover {
+  height: 100px;
+  display: block;
+  background-size: cover !important;
+  background-position: center !important;
+  background: #1DA1F2;
+}
+
+.home .row .left-bar .profileCard .profileContent,
+.home .row .ppl .profileCard .profileContent,
+.search .row .left-bar .profileCard .profileContent,
+.search .row .ppl .profileCard .profileContent {
+  position: relative;
+  background: #FFF;
+}
+
+.home .row .left-bar .profileCard .profileContent .avatar,
+.home .row .ppl .profileCard .profileContent .avatar,
+.search .row .left-bar .profileCard .profileContent .avatar,
+.search .row .ppl .profileCard .profileContent .avatar {
+  height: 74px;
+  width: 74px;
+  background: #1DA1F2;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  position: absolute;
+  top: -37px;
+  left: 10px;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.home .row .left-bar .profileCard .profileContent .avatar:hover,
+.home .row .ppl .profileCard .profileContent .avatar:hover,
+.search .row .left-bar .profileCard .profileContent .avatar:hover,
+.search .row .ppl .profileCard .profileContent .avatar:hover {
+  border-color: #1DA1F2;
+}
+
+.home .row .left-bar .profileCard .profileContent .avatar i,
+.home .row .ppl .profileCard .profileContent .avatar i,
+.search .row .left-bar .profileCard .profileContent .avatar i,
+.search .row .ppl .profileCard .profileContent .avatar i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFF;
+  font-size: 2rem;
+}
+
+.home .row .left-bar .profileCard .profileContent a,
+.home .row .ppl .profileCard .profileContent a,
+.search .row .left-bar .profileCard .profileContent a,
+.search .row .ppl .profileCard .profileContent a {
+  text-decoration: none;
+}
+
+.home .row .left-bar .profileCard .profileContent .userDetails,
+.home .row .ppl .profileCard .profileContent .userDetails,
+.search .row .left-bar .profileCard .profileContent .userDetails,
+.search .row .ppl .profileCard .profileContent .userDetails {
+  padding-top: 5px;
+  padding-left: 95px;
+}
+
+.home .row .left-bar .profileCard .profileContent .userDetails span.name,
+.home .row .ppl .profileCard .profileContent .userDetails span.name,
+.search .row .left-bar .profileCard .profileContent .userDetails span.name,
+.search .row .ppl .profileCard .profileContent .userDetails span.name {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: -3px;
+  display: block;
+}
+
+.home .row .left-bar .profileCard .profileContent .userDetails span.username,
+.home .row .ppl .profileCard .profileContent .userDetails span.username,
+.search .row .left-bar .profileCard .profileContent .userDetails span.username,
+.search .row .ppl .profileCard .profileContent .userDetails span.username {
+  font-size: .9rem;
+  color: #657786;
+}
+
+.home .row .left-bar .profileCard .profileContent .userDetails span.username:before,
+.home .row .ppl .profileCard .profileContent .userDetails span.username:before,
+.search .row .left-bar .profileCard .profileContent .userDetails span.username:before,
+.search .row .ppl .profileCard .profileContent .userDetails span.username:before {
+  content: '@';
+}
+
+.home .row .left-bar .profileCard .profileContent .userStats,
+.home .row .ppl .profileCard .profileContent .userStats,
+.search .row .left-bar .profileCard .profileContent .userStats,
+.search .row .ppl .profileCard .profileContent .userStats {
+  margin: 20px 0 0;
+}
+
+.home .row .left-bar .profileCard .profileContent .userStats > div,
+.home .row .ppl .profileCard .profileContent .userStats > div,
+.search .row .left-bar .profileCard .profileContent .userStats > div,
+.search .row .ppl .profileCard .profileContent .userStats > div {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.home .row .left-bar .profileCard .profileContent .userStats > div .mini-title,
+.home .row .ppl .profileCard .profileContent .userStats > div .mini-title,
+.search .row .left-bar .profileCard .profileContent .userStats > div .mini-title,
+.search .row .ppl .profileCard .profileContent .userStats > div .mini-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #657786;
+  display: block;
+}
+
+.home .row .left-bar .profileCard .profileContent .userStats > div .value,
+.home .row .ppl .profileCard .profileContent .userStats > div .value,
+.search .row .left-bar .profileCard .profileContent .userStats > div .value,
+.search .row .ppl .profileCard .profileContent .userStats > div .value {
+  display: block;
+  font-size: 1.2rem;
+  color: #1DA1F2;
+}
+
+.home .row .left-bar .trends,
+.home .row .ppl .trends,
+.search .row .left-bar .trends,
+.search .row .ppl .trends {
+  margin-top: 13px;
+  background: #FFF;
+  padding: 10px 10px 10px 15px;
+}
+
+.home .row .left-bar .trends .title,
+.home .row .ppl .trends .title,
+.search .row .left-bar .trends .title,
+.search .row .ppl .trends .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.home .row .left-bar .trends .content,
+.home .row .ppl .trends .content,
+.search .row .left-bar .trends .content,
+.search .row .ppl .trends .content {
+  margin-top: 7px;
+}
+
+.home .row .left-bar .trends .content .trend,
+.home .row .ppl .trends .content .trend,
+.search .row .left-bar .trends .content .trend,
+.search .row .ppl .trends .content .trend {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #1DA1F2;
+}
+
+.home .row .content .publish,
+.search .row .content .publish {
+  position: relative;
+  padding: 15px 20px 15px 30px;
+  background: #e8f5fd;
+}
+
+.home .row .content .publish .photo,
+.search .row .content .publish .photo {
+  float: left;
+  margin-right: 10px;
+}
+
+.home .row .content .publish .photo img,
+.search .row .content .publish .photo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.home .row .content .publish textarea,
+.search .row .content .publish textarea {
+  height: 33px;
+  margin-top: 2px;
+  padding: 5px 10px;
+  padding-right: 25px;
+  border-radius: 8px;
+  border: 1px solid #A4D9F9;
+  width: calc(100% - 50px);
+  outline: none;
+  resize: none;
+}
+
+.home .row .content .publish textarea::-webkit-input-placeholder,
+.search .row .content .publish textarea::-webkit-input-placeholder {
+  color: #1ea1f2;
+}
+
+.home .row .content .publish textarea:-ms-input-placeholder,
+.search .row .content .publish textarea:-ms-input-placeholder {
+  color: #1ea1f2;
+}
+
+.home .row .content .publish textarea::-ms-input-placeholder,
+.search .row .content .publish textarea::-ms-input-placeholder {
+  color: #1ea1f2;
+}
+
+.home .row .content .publish textarea::placeholder,
+.search .row .content .publish textarea::placeholder {
+  color: #1ea1f2;
+}
+
+.home .row .content .publish textarea:focus,
+.home .row .content .publish textarea.has-data,
+.search .row .content .publish textarea:focus,
+.search .row .content .publish textarea.has-data {
+  height: 150px;
+}
+
+.home .row .content .publish i,
+.search .row .content .publish i {
+  color: #A4D9F9;
+  position: absolute;
+  cursor: pointer;
+  right: 35px;
+  top: 27px;
+}
+
+.home .row .content .publish span.counter,
+.search .row .content .publish span.counter {
+  position: absolute;
+  font-size: 12px;
+  color: #A4D9F9;
+  bottom: 25px;
+  left: 80px;
+}
+
+.home .row .content .publish button,
+.search .row .content .publish button {
+  position: absolute;
+  display: none;
+  color: #1ea1f2;
+  border: 1px solid #1ea1f2;
+  background: none;
+  font-size: 12px;
+  right: 35px;
+  bottom: 25px;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+.home .row .content .publish button[disabled],
+.search .row .content .publish button[disabled] {
+  color: #A4D9F9;
+  border-color: #A4D9F9;
+}
+
+.home .row .content .publish textarea:focus ~ button,
+.home .row .content .publish textarea.has-data ~ button,
+.search .row .content .publish textarea:focus ~ button,
+.search .row .content .publish textarea.has-data ~ button {
+  display: block;
+}
+
+.home .row .content .posts,
+.search .row .content .posts {
+  background: #FFF;
+}
+
+.home .row .content .posts .post,
+.search .row .content .posts .post {
+  padding: 5px 15px 5px 5px;
+  margin-left: 60px;
+  position: relative;
+}
+
+.home .row .content .posts .post:not(:last-of-type),
+.search .row .content .posts .post:not(:last-of-type) {
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.home .row .content .posts .post i#dropdownMenuI,
+.search .row .content .posts .post i#dropdownMenuI {
+  display: inline;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.home .row .content .posts .post .dropdown-menu a,
+.search .row .content .posts .post .dropdown-menu a {
+  color: #66757f;
+  cursor: pointer;
+}
+
+.home .row .content .posts .post .dropdown-menu a:hover,
+.search .row .content .posts .post .dropdown-menu a:hover {
+  background: #1DA1F2;
+  color: #FFF;
+}
+
+.home .row .content .posts .post .postContent,
+.search .row .content .posts .post .postContent {
+  position: relative;
+}
+
+.home .row .content .posts .post .postContent a.user,
+.search .row .content .posts .post .postContent a.user {
+  text-decoration: none;
+}
+
+.home .row .content .posts .post .postContent a.user img,
+.search .row .content .posts .post .postContent a.user img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  left: -48px;
+}
+
+.home .row .content .posts .post .postContent div.data,
+.search .row .content .posts .post .postContent div.data {
+  padding-left: 10px;
+}
+
+.home .row .content .posts .post .postContent div.data a.name,
+.search .row .content .posts .post .postContent div.data a.name {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  margin-right: 5px;
+}
+
+.home .row .content .posts .post .postContent div.data a.username,
+.search .row .content .posts .post .postContent div.data a.username {
+  text-decoration: none;
+  font-size: .95rem;
+  color: #657786;
+}
+
+.home .row .content .posts .post .postContent div.data a.username:before,
+.search .row .content .posts .post .postContent div.data a.username:before {
+  content: '@';
+}
+
+.home .row .content .posts .post .postContent div.data a.date,
+.search .row .content .posts .post .postContent div.data a.date {
+  text-decoration: none;
+  font-size: .95rem;
+  color: #657786;
+}
+
+.home .row .content .posts .post .postContent div.data a.date:before,
+.search .row .content .posts .post .postContent div.data a.date:before {
+  content: '.';
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.home .row .content .posts .post .postContent .content,
+.search .row .content .posts .post .postContent .content {
+  padding-left: 10px;
+}
+
+.home .row .content .posts .post .postContent .content p,
+.search .row .content .posts .post .postContent .content p {
+  margin: 0 5px 10px 0;
+}
+
+.home .row .content .posts .post .postContent .content img,
+.search .row .content .posts .post .postContent .content img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.home .row .content .posts .post .postContent .actions,
+.search .row .content .posts .post .postContent .actions {
+  padding: 10px 0;
+  font-size: .9rem;
+}
+
+.home .row .content .posts .post .postContent .actions .action,
+.search .row .content .posts .post .postContent .actions .action {
+  text-decoration: none;
+  cursor: pointer;
+  color: #657786;
+  margin: 0 15px 0 5px;
+}
+
+.home .row .content .posts .post .postContent .actions .action.liked,
+.search .row .content .posts .post .postContent .actions .action.liked {
+  color: #E0245D;
+}
+
+.home .row .content .posts .post .postContent .actions .action i,
+.search .row .content .posts .post .postContent .actions .action i {
+  margin-right: 7px;
+}
+
+.home .row .content .posts .post .postContent .actions .action span,
+.search .row .content .posts .post .postContent .actions .action span {
+  font-weight: bold;
+}
+
+.home .row .content .no-tweets,
+.search .row .content .no-tweets {
+  background: #FFF;
+  padding: 10px 20px;
+}
+
+.home .row .content .no-tweets h3,
+.search .row .content .no-tweets h3 {
+  font-weight: bold;
+}
+
+.home .row .content .no-tweets h3 span,
+.search .row .content .no-tweets h3 span {
+  font-weight: normal;
+}
+
+.home .row .content .no-tweets h3 span:before,
+.search .row .content .no-tweets h3 span:before {
+  content: '@';
+}
+
+.home .row .content .no-tweets p,
+.search .row .content .no-tweets p {
+  color: #657786;
+}
+
+.home .row .right-bar,
+.search .row .right-bar {
+  padding-left: 10px;
+}
+
+.home .row .right-bar .suggestions,
+.search .row .right-bar .suggestions {
+  background: #FFF;
+  padding: 10px 10px 10px 15px;
+}
+
+.home .row .right-bar .suggestions .title,
+.search .row .right-bar .suggestions .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.home .row .right-bar .suggestions .content,
+.search .row .right-bar .suggestions .content {
+  margin-top: 7px;
+}
+
+.home .row .right-bar .suggestions .content .someone,
+.search .row .right-bar .suggestions .content .someone {
+  padding: 8px 0;
+  position: relative;
+}
+
+.home .row .right-bar .suggestions .content .someone:not(:last-of-type),
+.search .row .right-bar .suggestions .content .someone:not(:last-of-type) {
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.home .row .right-bar .suggestions .content .someone a,
+.search .row .right-bar .suggestions .content .someone a {
+  text-decoration: none;
+}
+
+.home .row .right-bar .suggestions .content .someone a img,
+.search .row .right-bar .suggestions .content .someone a img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  float: left;
+}
+
+.home .row .right-bar .suggestions .content .someone a span.name,
+.search .row .right-bar .suggestions .content .someone a span.name {
+  font-weight: bold;
+  color: #000;
+  margin-left: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+
+.home .row .right-bar .suggestions .content .someone a span.username,
+.search .row .right-bar .suggestions .content .someone a span.username {
+  font-size: .95rem;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 80px;
+  overflow: hidden;
+  color: #657786;
+  text-overflow: ellipsis;
+}
+
+.home .row .right-bar .suggestions .content .someone a span.username:before,
+.search .row .right-bar .suggestions .content .someone a span.username:before {
+  content: '@';
+}
+
+.home .row .right-bar .suggestions .content .someone button,
+.search .row .right-bar .suggestions .content .someone button {
+  cursor: pointer;
+  margin: 5px 0 0 10px;
+  padding: 3px 20px;
+  background: #FFF;
+  border: 1px solid #1DA1F2;
+  border-radius: 15px;
+  color: #1DA1F2;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.home .row .right-bar .about,
+.search .row .right-bar .about {
+  background: #FFF;
+  margin-top: 10px;
+  padding: 12px;
+  color: #657786;
+  font-size: .9rem;
+}
+
+.home .row .right-bar .about a,
+.search .row .right-bar .about a {
+  color: #657786;
+  text-decoration: none;
+  margin: 0 3px;
+}
+

@@ -1,0 +1,817 @@
+/*~~~~~~~~~~~~~~~* Fixed Mixins *~~~~~~~~~~~~~~~*/
+
+@media (max-width: 575px) {
+  .d-xs-none {
+    display: none !important;
+  }
+
+  .d-xs-block {
+    display: block !important;
+  }
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.loading-screen {
+  position: fixed;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loading-screen img {
+  position: absolute;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*~~~~~~~~~~~~~~~~~~* Navbar *~~~~~~~~~~~~~~~~~~*/
+
+nav {
+  background: #FFF;
+  border-bottom: 1px solid #BBB;
+  padding: 0 !important;
+  height: 52px;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  height: 44px;
+}
+
+nav ul a li {
+  float: left;
+  padding: 12px 15px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+nav ul a li:hover,
+nav ul a li.active {
+  border-bottom: 2px solid #1da1f2;
+}
+
+nav ul a li:hover i,
+nav ul a li.active i {
+  color: #1da1f2;
+}
+
+nav ul a li i {
+  font-size: 1.15rem;
+  color: #66757f;
+  margin-right: 3px;
+}
+
+nav ul a li span {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #66757f;
+}
+
+nav .form-inline form input {
+  background: #f5f8fa;
+  font-size: .86rem;
+  margin-right: 0 !important;
+  border-radius: 16px;
+  border-right: none;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+nav .form-inline form button {
+  border: 1px solid #ced4da;
+  background: none;
+  border-left: none;
+  background: #f5f8fa;
+  margin-left: -2px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+nav .form-inline .dropdown img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin-left: 13px;
+}
+
+nav .form-inline .dropdown .dropdown-item:hover {
+  background: #1da1f2;
+  color: #FFF;
+}
+
+nav .form-inline button.tweet {
+  background: #1da1f2;
+  color: #FFF;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-left: 13px;
+}
+
+.alert-message {
+  position: fixed;
+  top: 52px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9;
+}
+
+.alert-message .card {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: #66757f;
+  padding: 10px 5px;
+}
+
+.alert-message .card i {
+  position: absolute;
+  font-size: .8rem;
+  color: #AAA;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* alertify */
+
+.ajs-header {
+  font-weight: bold;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.ajs-button.ajs-ok {
+  background: #E02459;
+  border: 1px solid #E02459;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 17px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.ajs-button.ajs-ok:hover {
+  background: #ac002b;
+  border-color: #ac002b;
+}
+
+.ajs-button.ajs-cancel {
+  background: #FFF;
+  border-radius: 17px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #66757f;
+  color: #66757f;
+  font-weight: bold;
+  outline: none;
+}
+
+i.new-notify {
+  background: #1da1f2;
+  height: 6.5px;
+  width: 6.5px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+body {
+  background: #e6ecf0;
+  padding-top: 52px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header .cover {
+  height: 500px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  position: relative;
+}
+
+.header .cover:before {
+  background-color: rgba(0, 0, 0, 0.37);
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.header .cover i.fa-camera {
+  font-size: 3.5rem;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.header .cover .dropdown-menu {
+  position: absolute;
+  left: 35px !important;
+}
+
+.header .cover .dropdown-menu a,
+.header .cover .dropdown-menu label {
+  color: #66757f;
+  cursor: pointer;
+}
+
+.header .cover .dropdown-menu a:hover,
+.header .cover .dropdown-menu label:hover {
+  background: #1DA1F2;
+  color: #FFF;
+}
+
+.header .user {
+  background: #FFF;
+  position: relative;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.header .user .profile-pic {
+  height: 200px;
+  width: 200px;
+  background: #1DA1F2;
+  border-radius: 50%;
+  position: absolute;
+  top: -110px;
+  border: 4px solid #FFF;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  cursor: pointer;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.header .user .profile-pic:hover {
+  border-color: #1da1f2;
+}
+
+.header .user .profile-pic i.fa-camera {
+  font-size: 3.5rem;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .user .profile-pic .dropdown-menu {
+  position: absolute;
+  left: 35px !important;
+}
+
+.header .user .profile-pic .dropdown-menu a,
+.header .user .profile-pic .dropdown-menu label {
+  color: #66757f;
+  cursor: pointer;
+}
+
+.header .user .profile-pic .dropdown-menu a:hover,
+.header .user .profile-pic .dropdown-menu label:hover {
+  background: #1DA1F2;
+  color: #FFF;
+}
+
+@media (max-width: 768px) {
+  .header .user .profile-pic {
+    top: -130px;
+  }
+}
+
+.header .user ul.stats {
+  margin-left: 200px;
+  list-style: none;
+}
+
+.header .user ul.stats li {
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+  margin-left: -4px;
+  cursor: default;
+}
+
+.header .user ul.stats li span.title {
+  display: block;
+  color: #657786;
+  padding: 0 12px;
+}
+
+.header .user ul.stats li span.value {
+  color: #657786;
+  display: block;
+  margin-top: -4px;
+  font-size: 1.3rem;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.header .user ul.stats li span.value:after {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  content: '';
+  display: block;
+}
+
+.header .user ul.stats li:hover span.value,
+.header .user ul.stats li.active span.value {
+  color: #1DA1F2;
+}
+
+.header .user ul.stats li:hover span.value:after,
+.header .user ul.stats li.active span.value:after {
+  border-bottom: 2px solid #1DA1F2;
+}
+
+@media (min-width: 768px) {
+  .header .user ul.stats li.d-md-inline {
+    float: right;
+  }
+}
+
+.header .user ul.stats .edit-profile,
+.header .user ul.stats .follow,
+.header .user ul.stats a.send-message,
+.header .user ul.stats .unfollow {
+  background: #FFF;
+  color: #66757f;
+  border: 1px solid #66757f;
+  outline: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-right: 17px;
+  padding-left: 17px;
+  border-radius: 25px;
+  font-weight: bold;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.header .user ul.stats .edit-profile:hover,
+.header .user ul.stats .follow:hover,
+.header .user ul.stats a.send-message:hover,
+.header .user ul.stats .unfollow:hover {
+  background: #F5F8F7;
+}
+
+.header .user ul.stats .edit-profile.unfollow,
+.header .user ul.stats .follow.unfollow,
+.header .user ul.stats a.send-message.unfollow,
+.header .user ul.stats .unfollow.unfollow {
+  background: #66757f;
+  color: #FFF;
+}
+
+.profile .about {
+  margin-top: 25px;
+}
+
+.profile .about .name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.profile .about span.username {
+  font-size: 1.1rem;
+  color: #657786;
+  margin-top: -3px;
+  display: block;
+}
+
+.profile .about span.username:before {
+  content: '@';
+}
+
+.profile .about .join,
+.profile .about .location,
+.profile .about .bio {
+  margin: 7px 0;
+}
+
+.profile .about .join i,
+.profile .about .location i,
+.profile .about .bio i {
+  color: #657786;
+  margin-right: 5px;
+}
+
+.profile .about .join span,
+.profile .about .join p,
+.profile .about .location span,
+.profile .about .location p,
+.profile .about .bio span,
+.profile .about .bio p {
+  font-size: 1.1rem;
+  color: #657786;
+}
+
+.profile .about .join p,
+.profile .about .location p,
+.profile .about .bio p {
+  color: #333;
+}
+
+.profile .content .comment {
+  background: #d5e3eb !important;
+  border-bottom: 1px solid #CACACD;
+}
+
+.profile .content .comment a.name {
+  font-weight: bold;
+  color: #000;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.profile .content .comment a.username {
+  text-decoration: none;
+  font-size: .95rem;
+  color: #657786;
+}
+
+.profile .content .comment a.username:before {
+  content: '@';
+}
+
+.profile .content .comment p {
+  margin-top: 6px;
+}
+
+.profile .content .publish,
+.profile .content .comment {
+  position: relative;
+  padding: 15px 20px 15px 30px;
+  background: #e8f5fd;
+}
+
+.profile .content .publish .photo,
+.profile .content .comment .photo {
+  float: left;
+  margin-right: 10px;
+}
+
+.profile .content .publish .photo img,
+.profile .content .comment .photo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.profile .content .publish textarea,
+.profile .content .comment textarea {
+  height: 33px;
+  margin-top: 2px;
+  padding: 5px 10px;
+  padding-right: 25px;
+  border-radius: 8px;
+  border: 1px solid #A4D9F9;
+  width: calc(100% - 50px);
+  outline: none;
+  resize: none;
+}
+
+.profile .content .publish textarea::-webkit-input-placeholder,
+.profile .content .comment textarea::-webkit-input-placeholder {
+  color: #1ea1f2;
+}
+
+.profile .content .publish textarea:-ms-input-placeholder,
+.profile .content .comment textarea:-ms-input-placeholder {
+  color: #1ea1f2;
+}
+
+.profile .content .publish textarea::-ms-input-placeholder,
+.profile .content .comment textarea::-ms-input-placeholder {
+  color: #1ea1f2;
+}
+
+.profile .content .publish textarea::placeholder,
+.profile .content .comment textarea::placeholder {
+  color: #1ea1f2;
+}
+
+.profile .content .publish textarea:focus,
+.profile .content .publish textarea.has-data,
+.profile .content .comment textarea:focus,
+.profile .content .comment textarea.has-data {
+  height: 150px;
+}
+
+.profile .content .publish i,
+.profile .content .comment i {
+  color: #A4D9F9;
+  position: absolute;
+  cursor: pointer;
+  right: 35px;
+  top: 27px;
+}
+
+.profile .content .publish span.counter,
+.profile .content .comment span.counter {
+  position: absolute;
+  font-size: 12px;
+  color: #A4D9F9;
+  bottom: 25px;
+  left: 80px;
+}
+
+.profile .content .publish button,
+.profile .content .comment button {
+  position: absolute;
+  display: none;
+  color: #1ea1f2;
+  border: 1px solid #1ea1f2;
+  background: none;
+  font-size: 12px;
+  right: 35px;
+  bottom: 25px;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+.profile .content .publish button[disabled],
+.profile .content .comment button[disabled] {
+  color: #A4D9F9;
+  border-color: #A4D9F9;
+}
+
+.profile .content .publish textarea:focus ~ button,
+.profile .content .publish textarea.has-data ~ button,
+.profile .content .comment textarea:focus ~ button,
+.profile .content .comment textarea.has-data ~ button {
+  display: block;
+}
+
+.profile .content .posts {
+  padding-top: 0 !important;
+  padding-bottom: 15px;
+  background: #FFF;
+}
+
+.profile .content .posts .post {
+  padding: 5px 15px 5px 5px;
+  margin-left: 60px;
+  position: relative;
+}
+
+.profile .content .posts .post:not(:last-of-type) {
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.profile .content .posts .post i#dropdownMenuI {
+  display: inline;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.profile .content .posts .post .dropdown-menu a {
+  color: #66757f;
+  cursor: pointer;
+}
+
+.profile .content .posts .post .dropdown-menu a:hover {
+  background: #1DA1F2;
+  color: #FFF;
+}
+
+.profile .content .posts .post .postContent {
+  position: relative;
+}
+
+.profile .content .posts .post .postContent a.user {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.profile .content .posts .post .postContent a.user img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  left: -48px;
+}
+
+.profile .content .posts .post .postContent div.data {
+  padding-left: 10px;
+}
+
+.profile .content .posts .post .postContent div.data a.name {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  margin-right: 5px;
+}
+
+.profile .content .posts .post .postContent div.data a.username {
+  text-decoration: none;
+  font-size: .95rem;
+  color: #657786;
+}
+
+.profile .content .posts .post .postContent div.data a.username:before {
+  content: '@';
+}
+
+.profile .content .posts .post .postContent div.data a.date {
+  text-decoration: none;
+  font-size: .95rem;
+  color: #657786;
+}
+
+.profile .content .posts .post .postContent div.data a.date:before {
+  content: '.';
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.profile .content .posts .post .postContent .content {
+  padding-left: 10px;
+}
+
+.profile .content .posts .post .postContent .content p {
+  margin: 0 5px 10px 0;
+}
+
+.profile .content .posts .post .postContent .content img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.profile .content .posts .post .postContent .actions {
+  padding: 10px 0;
+  font-size: .9rem;
+}
+
+.profile .content .posts .post .postContent .actions .action {
+  text-decoration: none;
+  cursor: pointer;
+  color: #657786;
+  margin: 0 15px 0 5px;
+}
+
+.profile .content .posts .post .postContent .actions .action.liked {
+  color: #E0245D;
+}
+
+.profile .content .posts .post .postContent .actions .action i {
+  margin-right: 7px;
+}
+
+.profile .content .posts .post .postContent .actions .action span {
+  font-weight: bold;
+}
+
+.profile .content .no-tweets h3 {
+  font-weight: bold;
+}
+
+.profile .content .no-tweets h3 span {
+  font-weight: normal;
+}
+
+.profile .content .no-tweets h3 span:before {
+  content: '@';
+}
+
+.profile .content .no-tweets p {
+  color: #657786;
+}
+
+.profile .right-bar {
+  padding-left: 10px;
+}
+
+.profile .right-bar .suggestions {
+  background: #FFF;
+  padding: 10px 10px 10px 15px;
+}
+
+.profile .right-bar .suggestions .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.profile .right-bar .suggestions .content {
+  margin-top: 7px;
+}
+
+.profile .right-bar .suggestions .content .someone {
+  padding: 8px 0;
+  position: relative;
+}
+
+.profile .right-bar .suggestions .content .someone:not(:last-of-type) {
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.profile .right-bar .suggestions .content .someone i.times {
+  color: #b5babe;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.profile .right-bar .suggestions .content .someone a {
+  text-decoration: none;
+}
+
+.profile .right-bar .suggestions .content .someone a img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  float: left;
+}
+
+.profile .right-bar .suggestions .content .someone a span.name {
+  font-weight: bold;
+  color: #000;
+  margin-left: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile .right-bar .suggestions .content .someone a span.username {
+  font-size: .95rem;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 80px;
+  overflow: hidden;
+  color: #657786;
+  text-overflow: ellipsis;
+}
+
+.profile .right-bar .suggestions .content .someone a span.username:before {
+  content: '@';
+}
+
+.profile .right-bar .suggestions .content .someone button {
+  margin: 5px 0 0 10px;
+  padding: 3px 20px;
+  background: #FFF;
+  border: 1px solid #1DA1F2;
+  border-radius: 15px;
+  color: #1DA1F2;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.profile .right-bar .about {
+  background: #FFF;
+  margin-top: 10px;
+  padding: 12px;
+  color: #657786;
+  font-size: .9rem;
+}
+
+.profile .right-bar .about a {
+  color: #657786;
+  text-decoration: none;
+  margin: 0 3px;
+}
+

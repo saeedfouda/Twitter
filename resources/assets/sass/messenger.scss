@@ -1,0 +1,183 @@
+@import "global.scss";
+body{
+    background: #e6ecf0;
+    padding-top: 52px;
+    padding-bottom: 0;
+}
+.messengers{
+    background: #FFF;
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    .single{
+        padding: 8px 10px 10px 85px;
+        position: relative;
+        display: block;
+        background: #F4f4f4;
+        min-height: 81px;
+        border-bottom: 1px solid #EFEFEF;
+        transition: all .3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        &:hover{
+            background: #FFF;
+        }
+        img{
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            left: 10px;
+        }
+        .name{
+            font-weight: bold;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 5px;
+        }
+        p.message{
+            color: #444;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.messenger{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .row>div{
+        padding: 15px 0 15px 15px;
+        &.chat-wrapper{
+            padding: 0;
+            padding-left: 10px;
+            .chat{
+                background: #f6f6f8;
+                border: 1px solid #DDD;
+                height: 100%;
+                padding: 15px 0 15px 15px;
+                position: relative;
+                overflow: hidden;
+                div.name{
+                    margin-right: 15px;
+                    border-bottom: 1px solid #d7e5ed;
+                    color: #3095dc;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding-bottom: 5px;
+                    a{
+                        text-decoration: none;
+                        color: #3095dc;
+                    }
+                }
+                .messages{
+                    margin-top: 10px;
+                    padding-right: 15px;
+                    max-height: calc(100vh - 200px);
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    padding-bottom: 60px;
+                    height: calc(100vh - 200px);
+                    overflow: hidden;
+                    .message{
+                        position: relative;
+                        padding-left: 45px;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            border-radius: 50%;
+                            height: 40px;
+                            width: 40px;
+                        }
+                        ul{
+                            padding-left: 0;
+                            list-style: none;
+                            li{
+                                background: #FFF;
+                                color: #000;
+                                font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                font-weight: 100;
+                                margin: 0 0 1px 0;
+                                border-radius: 5px 25px 25px 5px;
+                                padding: 7px 12px;
+                                width: auto;
+                                display: table;
+                                border: 1px solid #EEE;
+                                word-break: break-all;
+                                &:first-child{
+                                    border-radius: 25px 25px 25px 5px;
+                                }
+                                &:last-child{
+                                    border-radius: 5px 25px 25px 25px;
+                                }
+                            }
+                        }
+                        &.mine{
+                            padding-left: 0;
+                            padding-right: 45px;
+                            img{
+                                right: 0;
+                                left: auto;
+                            }
+                            ul{
+                                float: right;
+                                li{
+                                    color: white;
+                                    background: #3C7EFD;
+                                    display: block;
+                                    border-radius: 25px 5px 5px 25px;
+                                    &:first-child{
+                                        border-radius: 25px 25px 5px 25px;
+                                    }
+                                    &:last-child{
+                                        border-radius: 25px 5px 25px 25px;
+                                    }
+                                }
+                            }
+                            &:last-of-type{
+                                .seen{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .write{
+                        padding: 10px 15px;
+                        background: #FFF;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        display: -webkit-flex;
+                        textarea{
+                            cursor: text;
+                            min-width: 100px !important;
+                            max-height: 100px;
+                            resize: none;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+                            padding-right: 25px;
+                        }
+                        .sendMsg{
+                            position: absolute;
+                            right: 25px;
+                            bottom: 20px;
+                            color: #3395dc;
+                            cursor: pointer;
+                            &[disabled]{
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

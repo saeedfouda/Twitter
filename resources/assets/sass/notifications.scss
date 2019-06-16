@@ -1,0 +1,78 @@
+@import "global.scss";
+body{
+    background: #e6ecf0;
+    padding-top: 52px;
+}
+.notifications{
+    margin-top: 15px;
+    background: #FFF;
+    padding: 0;
+    .title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 10px 15px 5px;
+        border-bottom: 1px solid #EEE;
+    }
+    .notify{
+        padding: 20px 50px;
+        border-bottom: 1px solid #EEE;
+        position: relative;
+        .bird{
+            height: 25px;
+            position: absolute;
+            left: 10px;
+            top: 25px;
+        }
+        p.what{
+            color: #333;
+            a{
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .date{
+                font-size: .95rem;
+                color: #657786;
+                &:before{
+                    content: '.';
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
+            }
+            margin-bottom: 3px;
+        }
+        .tweet{
+            border: 1px solid #EEE;
+            border-radius: 7px;
+            padding: 12px;
+            transition: all .3s;
+            cursor: pointer;
+            .name{
+                color: #000;
+                font-size: .9rem;
+                font-weight: bold;
+                margin-bottom: -3px;
+                text-decoration: none;
+            }
+            .username{
+                &:before{
+                    content: '@'
+                }
+                font-size: .7rem;
+                color: #657786;
+                text-decoration: none;
+            }
+            .description{
+                font-weight: .8rem;
+                color: #333;
+                margin-bottom: 0;
+                display: block;
+                text-decoration: none;
+            }
+            &:hover{
+                background: #ECECEC;
+                border-color: #AAA;
+            }
+        }
+    }
+}

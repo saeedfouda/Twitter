@@ -1,0 +1,179 @@
+/*~~~~~~~~~~~~~~~* Fixed Mixins *~~~~~~~~~~~~~~~*/
+@mixin centerizing{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 575px) {
+    .d-xs-none{
+        display: none !important
+    }
+    .d-xs-block{
+        display: block !important
+    }
+}
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    word-wrap: break-word;
+}
+html{
+    font-size: 14px;
+}
+body{
+    padding-bottom: 80px;
+}
+.loading-screen{
+    position: fixed;
+    background: #FFF;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    img{
+        position: absolute;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+/*~~~~~~~~~~~~~~~~~~* Navbar *~~~~~~~~~~~~~~~~~~*/
+nav{
+    background: #FFF;
+    border-bottom: 1px solid #BBB;
+    padding: 0 !important;
+    height: 52px;
+    ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        height: 44px;
+        a{
+            li{
+                float: left;
+                padding: 12px 15px;
+                transition: all .3s;
+                &:hover, &.active{
+                    border-bottom: 2px solid #1da1f2;
+                    i{
+                        color: #1da1f2;
+                    }
+                }
+                i{
+                    font-size: 1.15rem;
+                    color: #66757f;
+                    margin-right: 3px;
+                }
+                span{
+                    font-size: .9rem;
+                    font-weight: bold;
+                    color: #66757f;
+                }
+            }
+        }
+    }
+    .form-inline{
+        form{
+            input{
+                background: #f5f8fa;
+                font-size: .86rem;
+                margin-right: 0 !important;
+                border-radius: 16px;
+                border-right: none;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+            button{
+                border: 1px solid #ced4da;
+                background: none;
+                border-left: none;
+                background: #f5f8fa;
+                margin-left: -2px;
+                border-top-right-radius: 16px;
+                border-bottom-right-radius: 16px;
+            }
+        }
+        .dropdown{
+            img{
+                border-radius: 50%;
+                height: 35px;
+                width: 35px;
+                margin-left: 13px;
+            }
+            .dropdown-item{
+                &:hover{
+                    background: #1da1f2;
+                    color: #FFF;
+                }
+            }
+        }
+        button.tweet{
+            background: #1da1f2;
+            color: #FFF;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-left: 13px;
+        }
+    }
+}
+.alert-message{
+    position: fixed;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    .card{
+        box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+        color: #66757f;
+        padding: 10px 5px;
+        i{
+            position: absolute;
+            font-size: .8rem;
+            color: #AAA;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* alertify */
+.ajs-header{
+    font-weight: bold;
+    border-bottom: 1px solid #e6ecf0
+}
+.ajs-button.ajs-ok{
+    background: #E02459;
+    border: 1px solid #E02459;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 17px;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        background: #ac002b;
+        border-color: #ac002b;
+    }
+}
+.ajs-button.ajs-cancel{
+    background: #FFF;
+    border-radius: 17px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #66757f;
+    color: #66757f;
+    font-weight: bold;
+    outline: none;
+}
+i.new-notify{
+    background: #1da1f2;
+    height: 6.5px;
+    width: 6.5px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
